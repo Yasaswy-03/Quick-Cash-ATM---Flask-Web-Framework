@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h1>Welcome, {{ data.name }}</h1>
+
+    <div class="dashboard-info">
+        <span><strong>Account No:</strong> {{ acc_no }}</span>
+        <span><strong>Balance:</strong> ₹ {{ data.balance }}</span>
+    </div>
+
+    <form action="/deposit/{{ acc_no }}" method="post">
+        <input type="text" name="amount" placeholder="Deposit amount" required>
+        <input type="submit" value="Deposit">
+    </form>
+
+    <form action="/withdraw/{{ acc_no }}" method="post">
+        <input type="text" name="amount" placeholder="Withdraw amount" required>
+        <input type="submit" value="Withdraw">
+    </form>
+
+</div>
+
+{% endblock %}

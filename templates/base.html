@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+    <main>
+        {%block content%}
+
+        {%endblock%}
+    </main>
+<br><br>
+    <footer>
+<hr>
+
+        <h2><p>If you have any issues , Kindly contact us </p></h2>
+        <pre>
+            Bank Name: Nuthana Bank
+            Address: 2nd Floor, Main Road, Near City Bus Stand, Hyderabad, Telangana – 500001
+            Phone: +91 98765 43210
+            Customer Care: +91 91234 56789
+            Email: nuthanabank@gmail.com
+
+            Banking Services: Savings, Current Accounts, Loans, Fixed Deposits
+            Customer Support: Available on Working Days
+
+            Working Hours:
+            Monday – Friday: 10:00 AM – 4:00 PM
+            Saturday: 10:00 AM – 2:00 PM
+            Sunday: Closed
+        </pre>
+
+    </footer>
+
+</body>
+
+</html>

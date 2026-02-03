@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <h1>NUTHANA Bank ATM</h1>
+
+            <form action="/dashboard" method="post">
+                <label for="">Enter User Name</label>
+                <input type="text" name="name" placeholder="User Name" required>
+                <label for="">Enter Account Number</label>
+                <input type="text" name="acc_no" placeholder="Account Number" required>
+                <label for="">Enter Initial Balance</label>
+                <input type="text" name="balance" placeholder="Initial Balance" required>
+                <input type="submit" value="Create Account">
+            </form>
+        </div>
+    </main>
+</body>
+
+
+</html>

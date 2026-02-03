@@ -1,0 +1,150 @@
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- BODY (ONLY CENTER HERE) ---------- */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: url("/static/images/3.jpg") center/cover no-repeat;
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;   /* 🔑 THIS IS THE FIX */
+}
+
+/* ---------- MAIN (NO FLEX HERE) ---------- */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+}
+
+/* ---------- CARD / FORM ---------- */
+.card,
+form,
+div {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(6px);
+    padding: 28px 32px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ---------- HEADINGS ---------- */
+h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #111;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ---------- TEXT ---------- */
+p {
+    font-size: 14px;
+    color: #475569;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ---------- FORMS ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ---------- INPUTS ---------- */
+input[type="text"],
+input[type="number"] {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* ---------- BUTTONS ---------- */
+input[type="submit"],
+button {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #2563eb;
+}
+
+/* ---------- DASHBOARD INFO ---------- */
+.dashboard-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-info span {
+    display: block;
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+/* ---------- ERROR PAGE ---------- */
+.error {
+    color: #b91c1c;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    margin-top: 60px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    font-size: 13px;
+    color: #374151;
+}
+
+footer pre {
+    font-family: inherit;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .card,
+    form,
+    div {
+        padding: 22px;
+    }
+}
